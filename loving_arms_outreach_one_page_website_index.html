@@ -1,0 +1,255 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Loving Arms Outreach Inc.</title>
+  <meta name="description" content="Loving Arms Outreach Inc. — Serving Atlanta and surrounding counties with food, essentials, and hope." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --primary:#7C3AED; /* purple */
+      --accent:#EC4899;  /* pink */
+      --green:#10B981;   /* green */
+      --bg:#0b0b12;
+      --card:#141427;
+      --text:#e8e8f3;
+      --muted:#b6b6cc;
+      --ring: rgba(124,58,237,.35);
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,sans-serif;background:linear-gradient(180deg,#0b0b12 0%, #0e0e1a 60%, #101024 100%);color:var(--text)}
+    a{text-decoration:none;color:inherit}
+    .container{width:min(1100px,92%);margin-inline:auto}
+    header{position:sticky;top:0;backdrop-filter: blur(8px);background:rgba(11,11,18,.7);border-bottom:1px solid rgba(255,255,255,.08);z-index:50}
+    .nav{display:flex;align-items:center;justify-content:space-between;padding:14px 0}
+    .brand{display:flex;gap:10px;align-items:center}
+    .brand .logo{height:40px;width:40px;border-radius:12px;background:conic-gradient(from 210deg at 50% 50%, var(--primary), var(--accent), var(--green), var(--primary));display:grid;place-items:center;color:white;font-weight:800}
+    .brand h1{font-size:18px;margin:0;letter-spacing:.4px}
+    .nav a.btn{padding:10px 16px;border-radius:999px;background:linear-gradient(90deg,var(--primary),var(--accent));box-shadow:0 10px 22px -10px var(--ring);font-weight:700}
+    .nav .links{display:flex;gap:18px;align-items:center}
+    .hero{position:relative;overflow:hidden}
+    .hero .inner{display:grid;grid-template-columns:1.1fr .9fr;gap:26px;align-items:center;padding:80px 0}
+    .pill{display:inline-flex;gap:8px;align-items:center;padding:6px 10px;border-radius:999px;border:1px solid rgba(255,255,255,.12);color:var(--muted);font-size:12px}
+    .title{font-size:44px;line-height:1.05;margin:.6rem 0 .3rem;font-weight:800}
+    .subtitle{font-size:18px;color:var(--muted);max-width:60ch}
+    .hero-card{background:radial-gradient(1200px 500px at -10% -20%, rgba(124,58,237,.25), transparent),radial-gradient(1000px 400px at 120% 120%, rgba(236,72,153,.2), transparent), var(--card);padding:24px;border:1px solid rgba(255,255,255,.08);border-radius:20px;box-shadow:0 20px 50px -30px rgba(0,0,0,.6)}
+    .hero-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:14px}
+    .stat{padding:16px;border-radius:16px;background:#111126;border:1px solid rgba(255,255,255,.06)}
+    .stat strong{font-size:28px}
+    section{padding:60px 0}
+    .section-title{font-size:28px;margin:0 0 10px}
+    .two-col{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+    .card{background:var(--card);border:1px solid rgba(255,255,255,.08);border-radius:18px;padding:20px}
+    ul.clean{margin:0;padding-left:18px}
+    .badges{display:flex;flex-wrap:wrap;gap:10px;margin-top:10px}
+    .badge{padding:8px 12px;border-radius:999px;background:#111126;border:1px solid rgba(255,255,255,.08);font-size:13px;color:var(--muted)}
+    .grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    .program h4{margin:8px 0 6px}
+    .cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:18px}
+    .btn{padding:12px 18px;border-radius:12px;font-weight:700;border:1px solid rgba(255,255,255,.1);background:#13132a;cursor:pointer}
+    .btn.primary{background:linear-gradient(90deg,var(--primary),var(--accent));border:none;box-shadow:0 20px 50px -20px var(--ring)}
+    .btn.ghost{background:transparent}
+    .impact{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+    .impact .kpi{background:#111126;border:1px solid rgba(255,255,255,.06);border-radius:16px;padding:18px;text-align:center}
+    .kpi .num{font-size:30px;font-weight:800}
+    .kpi .cap{color:var(--muted);font-size:12px}
+    .newsletter{display:grid;grid-template-columns:1fr auto;gap:10px;margin-top:14px}
+    input, textarea{width:100%;padding:12px 14px;border-radius:12px;background:#0f0f22;border:1px solid rgba(255,255,255,.12);color:var(--text);outline:0}
+    textarea{min-height:120px;resize:vertical}
+    form .row{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+    footer{padding:40px 0;color:var(--muted);border-top:1px solid rgba(255,255,255,.08)}
+    .tiny{font-size:12px;color:var(--muted)}
+    .center{text-align:center}
+    .divider{height:1px;background:linear-gradient(90deg,transparent,rgba(255,255,255,.12),transparent);margin:30px 0}
+    @media (max-width:960px){
+      .hero .inner, .two-col, .grid3, .impact{grid-template-columns:1fr}
+      .title{font-size:38px}
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <a class="brand" href="#top" aria-label="Loving Arms Outreach Inc.">
+        <div class="logo">LA</div>
+        <h1>Loving Arms Outreach Inc.</h1>
+      </a>
+      <div class="links">
+        <a href="#mission">Mission</a>
+        <a href="#programs">Programs</a>
+        <a href="#impact">Impact</a>
+        <a href="#contact">Contact</a>
+        <a class="btn" href="#donate" id="donateTop">Donate</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="top" class="hero">
+    <div class="container inner">
+      <div>
+        <span class="pill">Serving Atlanta • Greene • Rockdale • Newton</span>
+        <h2 class="title">Feeding families. Equipping neighbors. Strengthening Atlanta’s communities.</h2>
+        <p class="subtitle">Loving Arms Outreach Inc. provides essentials, healthy food, and hands‑on support to children, seniors, and families across the City of Atlanta and surrounding counties — Greene, Rockdale, and Newton — with dignity, compassion, and practical help.</p>
+        <div class="cta">
+          <a class="btn primary" href="#donate" id="donateHero">Donate Now</a>
+          <a class="btn ghost" href="#programs">See Our Work</a>
+        </div>
+        <div class="badges" aria-label="Areas we serve">
+          <span class="badge">City of Atlanta</span>
+          <span class="badge">Greene County</span>
+          <span class="badge">Rockdale County</span>
+          <span class="badge">Newton County</span>
+        </div>
+      </div>
+      <div class="hero-card">
+        <div class="hero-grid">
+          <div class="stat">
+            <strong>Mission</strong>
+            <p class="tiny">To meet urgent needs and reduce food insecurity for youth, seniors, and families through weekly meals, essentials distribution, and neighbor‑to‑neighbor support.</p>
+          </div>
+          <div class="stat">
+            <strong>Vision</strong>
+            <p class="tiny">A Metro Atlanta where every household has reliable access to healthy food, resources, and community networks that help them thrive.</p>
+          </div>
+          <div class="stat">
+            <strong>Values</strong>
+            <p class="tiny">Compassion • Dignity • Consistency • Collaboration • Accountability</p>
+          </div>
+          <div class="stat">
+            <strong>Get Involved</strong>
+            <p class="tiny">Give, volunteer, or partner to expand mobile distributions, workshops, and seasonal drives.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <section id="mission">
+    <div class="container two-col">
+      <div class="card">
+        <h3 class="section-title">Our Mission</h3>
+        <p>To serve families in underserved communities across Atlanta, Greene, Rockdale, and Newton counties by providing healthy food, essential household items, and practical support — while connecting people to education, resources, and caring relationships that build stability and hope.</p>
+        <ul class="clean">
+          <li>Weekly food assistance and mobile distributions</li>
+          <li>Seasonal drives (school supplies, coats, toys, holiday meals)</li>
+          <li>Nutrition and budget‑friendly cooking workshops</li>
+          <li>Senior outreach and wellness check‑ins</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3 class="section-title">Our Vision</h3>
+        <p>We envision communities where no neighbor goes without a meal, every child shows up to school prepared, and seniors receive the respect and support they deserve. By partnering with local leaders, faith communities, and civic organizations, we scale what works and build resilient neighborhoods — one act of care at a time.</p>
+        <div class="divider"></div>
+        <p class="tiny">IRS Status: Georgia nonprofit organization. Contact us for program details and partnership opportunities.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="programs">
+    <div class="container">
+      <h3 class="section-title">Programs & Services</h3>
+      <div class="grid3">
+        <div class="card program">
+          <span class="badge">Weekly</span>
+          <h4>Food Share & Mobile Pantry</h4>
+          <p>Fresh groceries, pantry staples, and meal kits for families and seniors, with delivery for homebound neighbors in select areas.</p>
+          <ul class="clean">
+            <li>Pick‑up & curbside options</li>
+            <li>Nutrition‑forward selections</li>
+          </ul>
+        </div>
+        <div class="card program">
+          <span class="badge">Monthly</span>
+          <h4>Workshops & Skillsets</h4>
+          <p>Hands‑on classes in meal prep, budgeting, digital basics for seniors, and youth empowerment days with mentors and local partners.</p>
+        </div>
+        <div class="card program">
+          <span class="badge">Seasonal</span>
+          <h4>Community Drives</h4>
+          <p>Back‑to‑school supplies, coat & toy giveaways, and holiday meal boxes coordinated with schools and community centers.</p>
+        </div>
+      </div>
+
+      <div class="divider"></div>
+
+      <div class="impact" id="impact">
+        <div class="kpi">
+          <div class="num">300</div>
+          <div class="cap">Meals served today</div>
+        </div>
+        <div class="kpi">
+          <div class="num">250</div>
+          <div class="cap">Families served to date</div>
+        </div>
+        <div class="kpi">
+          <div class="num">4</div>
+          <div class="cap">Counties served</div>
+        </div>
+        <div class="kpi">
+          <div class="num">20</div>
+          <div class="cap">Active volunteers</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="donate">
+    <div class="container two-col">
+      <div class="card">
+        <h3 class="section-title">Donate</h3>
+        <p>Your gift fuels weekly food distributions, skill‑building workshops, and outreach to seniors and families. Choose a quick amount or enter your own; you’ll be redirected to our secure donation page.</p>
+        <div class="cta">
+          <button class="btn" data-amt="25">$25</button>
+          <button class="btn" data-amt="50">$50</button>
+          <button class="btn" data-amt="100">$100</button>
+          <button class="btn" data-amt="250">$250</button>
+          <button class="btn ghost" id="customBtn">Custom</button>
+          <a class="btn primary" id="donateGo" href="#">Give Now</a>
+        </div>
+        <p class="tiny">Prefer in‑kind? <a href="#contact">Contact us</a> for our current needs list.</p>
+      </div>
+      <div class="card">
+        <h3 class="section-title">Volunteer or Partner</h3>
+        <p>We welcome corporate groups, community partners, and individual volunteers in Atlanta, Greene, Rockdale, and Newton counties. Let’s team up!</p>
+        <ul class="clean">
+          <li>Host a drive or sponsor a distribution</li>
+          <li>Volunteer for packing, delivery, or events</li>
+          <li>Offer space, services, or materials</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="container two-col">
+      <div class="card">
+        <h3 class="section-title">Contact Us</h3>
+        <p>Questions about services, donations, or partnerships? Send us a note and we’ll follow up.</p>
+        <form id="contactForm" onsubmit="return handleContact(event)">
+          <div class="row">
+            <input required type="text" name="name" placeholder="Full name" />
+            <input required type="email" name="email" placeholder="Email" />
+          </div>
+          <input type="text" name="county" placeholder="County (Atlanta, Greene, Rockdale, Newton, etc.)" />
+          <textarea required name="message" placeholder="How can we help?"></textarea>
+          <div class="cta">
+            <button class="btn primary" type="submit">Send Message</button>
+            <a class="btn ghost" href="mailto:lovingarmsoutreach65@gmail.com">Email Us</a>
+          </div>
+          <p class="tiny">By submitting, you agree to be contacted about services, volunteering, or donations.</p>
+        </form>
+      </div>
+      <div class="card">
+        <h3 class="section-title">Quick Info</h3>
+        <p><strong>Loving Arms Outreach Inc.</strong><br/>Metro Atlanta • Greene • Rockdale • Newton</p>
+        <p><a href="mailto:lovingarmsoutreach65@gmail.com">lovingarmsoutreach65@gmail.com</a></p>
+        <div class="newsletter">
+          <input id="newsEmail" type="email" placeholder="Get updates by email" />
+          <button class="btn" onclick="subscribeNews()">Subscribe</button>
+        </div>
+        <p class="tiny">We respect your inbox. Unsubscribe anytime.</p>
+      </div>
+    </div>
